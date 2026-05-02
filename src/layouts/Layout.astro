@@ -9,15 +9,23 @@ const currentPath = Astro.url.pathname;
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Quoc Bao An Nguyen | Software Engineer</title>
+    
+    <meta name="title" content="Quoc Bao An Nguyen | Backend Developer Portfolio" />
+    <meta name="description" content="Portfolio of Quốc Bảo An Nguyễn - Software Engineer in Lawrenceville, GA. Specializing in .NET, SQL, React, and AI Integration." />
+    <meta name="author" content="Quoc Bao An Nguyen" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Meta for Astro -->
+    <meta name="generator" content={Astro.generator} />
+</head>
 	<body>
-	<Header currentPath={currentPath} client:load />
+	<Header client:load />
     <slot />
     <Footer client:visible />
 	</body>

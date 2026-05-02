@@ -150,22 +150,29 @@ export default function HomePage() {
             >
               <div className="relative w-full flex items-center justify-center">
                 {/* Profile Info Container */}
-                <div className="relative w-full max-w-sm p-8 border-2 border-accent-teal/30 clip-diagonal bg-card-background/20 backdrop-blur-md overflow-hidden group">
+                <div className="relative w-full p-8 border-2 border-accent-teal/30 clip-diagonal bg-card-background/20 backdrop-blur-md overflow-hidden group">
                   <div className="space-y-6">
                     {/* Status */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-accent-teal animate-pulse" />
-                      <div>
-                        <p className="text-xs text-muted-text uppercase tracking-widest font-paragraph">
-                          Status
-                        </p>
-                        <p className="text-lg font-heading font-bold text-accent-teal">
-                          ONLINE
-                        </p>
+                    <div className="flex justify-between items-center gap-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-terminal w-8 h-8 text-accent-teal opacity-50"
+                      >
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" x2="20" y1="19" y2="19"></line>
+                      </svg>
+                      <div className="text-xs text-accent-teal/50 font-paragraph">
+                        STATUS: ONLINE
                       </div>
                     </div>
-
-                    <div className="h-px bg-gradient-to-r from-accent-teal/30 to-transparent" />
 
                     {/* Core Focus */}
                     <div>
@@ -177,6 +184,8 @@ export default function HomePage() {
                       </p>
                     </div>
 
+                    <div className="h-px bg-gradient-to-r from-accent-teal/30 to-transparent" />
+
                     {/* Primary Stack */}
                     <div>
                       <p className="text-xs text-muted-text uppercase tracking-widest font-paragraph mb-2">
@@ -186,6 +195,8 @@ export default function HomePage() {
                         .NET Core / C#
                       </p>
                     </div>
+
+                    <div className="h-px bg-gradient-to-r from-accent-rock-blue/60 to-transparent" />
 
                     {/* Experience */}
                     <div>
@@ -197,11 +208,9 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="h-px bg-gradient-to-r from-accent-teal/30 to-transparent" />
-
                     {/* Internship Badge */}
                     <div className="pt-2">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 border border-accent-rock-blue/40 bg-accent-rock-blue/5 rounded">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded">
                         <div className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
                         <span className="text-xs text-accent-teal font-paragraph uppercase tracking-widest font-semibold">
                           Available for Internship
@@ -292,13 +301,13 @@ export default function HomePage() {
                 >
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
                   <span className="relative z-10 flex items-center gap-2">
-                    Initialize Projects <ArrowUpRight className="w-5 h-5" />
+                    Explore Now <ArrowUpRight className="w-5 h-5" />
                   </span>
                 </button>
 
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com/baoandng"
+                    href="https://github.com/JasonPG2007"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-4 border border-accent-teal/20 text-foreground hover:text-accent-teal hover:border-accent-teal/50 transition-colors clip-diagonal-reverse bg-card-background/30 backdrop-blur-sm"
@@ -307,7 +316,7 @@ export default function HomePage() {
                     <FaGithub className="w-6 h-6" />
                   </a>
                   <a
-                    href="https://linkedin.com/in/baoandng"
+                    href="https://www.linkedin.com/in/quoc-bao-an-nguyen/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-4 border border-accent-teal/20 text-foreground hover:text-accent-teal hover:border-accent-teal/50 transition-colors clip-diagonal-reverse bg-card-background/30 backdrop-blur-sm"
@@ -733,7 +742,7 @@ export default function HomePage() {
                     className={`relative flex flex-col md:flex-row items-start mb-16 last:mb-0 ${idx % 2 === 0 ? "md:flex-row-reverse" : ""}`}
                   >
                     {/* Timeline Node */}
-                    <div className="absolute left-[-5px] md:left-1/2 top-0 w-2.5 h-2.5 bg-accent-teal rounded-full transform md:-translate-x-1/2 mt-2 md:mt-6 shadow-[0_0_10px_rgba(0,255,255,0.5)]" />
+                    <div className="absolute left-[-5px] md:left-1/2 top-0 w-2.5 h-2.5 bg-accent-teal rounded-full transform md:-translate-x-1/2 mt-2 md:mt-6 shadow-[0_0_10px_rgba(226,163,41,0.5)]" />
 
                     {/* Content Box */}
                     <div
@@ -834,7 +843,7 @@ export default function HomePage() {
                       <h3 className="font-heading text-xl font-bold text-foreground mb-2">
                         {edu.institutionName}
                       </h3>
-                      <p className="text-accent-teal font-paragraph text-sm mb-4">
+                      <p className="!text-accent-teal font-paragraph text-sm mb-4">
                         {edu.degreeProgram}
                       </p>
 

@@ -32,7 +32,7 @@ export const certificationsData: Certifications[] = [
     issuingOrganization: "Vanderbilt University",
     description:
       "Validated expertise in designing and deploying scalable systems on AWS.",
-    issueDate: "2023-08-01",
+    issueDate: "2026-03-03",
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/records/7TV4LQOOK4LC",
     image:
@@ -44,7 +44,7 @@ export const certificationsData: Certifications[] = [
     issuingOrganization: "Meta",
     description:
       "Validated expertise in designing and deploying scalable systems on AWS.",
-    issueDate: "2026-08-01",
+    issueDate: "2026-03-03",
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/records/6XMAOE9C7WAT",
     image:
@@ -77,10 +77,10 @@ export interface Education {
 export const educationData: Education[] = [
   {
     _id: "1",
-    institutionName: "University of Example",
-    degreeProgram: "Bachelor of Science in Computer Science",
+    institutionName: "Discovery High School",
+    degreeProgram: "High School Diploma",
     graduationDate: "2024-05-15",
-    honorsGPA: "Summa Cum Laude, GPA: 3.9/4.0",
+    honorsGPA: "GPA: 3.8/4.0, National Honor Society",
     location: "Example City, Country",
     additionalDetails:
       "Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering. Dean's List for 6 semesters.",
@@ -110,12 +110,21 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     _id: "1",
-    jobTitle: "Software Engineer",
-    companyName: "Tech Company",
-    startDate: "2022-01-01",
-    endDate: "2023-12-31",
+    jobTitle: "Nail Technician",
+    companyName: "Nail Salon Parisian",
+    startDate: "2020-02-03",
+    endDate: "2022-08-12",
     achievements:
-      "Developed and maintained web applications using React and Node.js, improving performance by 30%.",
+      "Provided high-quality manicures and pedicures, contributing to a 15% increase in repeat customer bookings. Maintained a 5-star customer satisfaction rating through meticulous service and personalized care.",
+  },
+  {
+    _id: "2",
+    jobTitle: "Full Stack Developer",
+    companyName: "Web Innovations Co.",
+    startDate: "20217-05-03",
+    endDate: "2020-02-12",
+    achievements:
+      "Developed and maintained responsive web applications using React and Node.js, contributing to a 20% increase in user engagement. Collaborated with UX/UI designers to translate wireframes into functional features.",
   },
 ];
 
@@ -192,6 +201,19 @@ export const projectsData: Projects[] = [
     githubLink: "https://github.com/baoandng/portfolio",
     technologies: "TypeScript, React, Node.js, Express, MongoDB",
     liveDemoLink: "https://baoandng.github.io/portfolio",
+  },
+  {
+    _id: "2",
+    title: "E-Commerce Platform",
+    description:
+      "Built a full-stack e-commerce solution with a focus on user experience and performance.",
+    achievements:
+      "Implemented a robust payment processing system and integrated with multiple payment gateways.",
+    image:
+      "https://static.wixstatic.com/media/bd17b4_223aae21a923416abfc2202d1eae3a7e~mv2.png/v1/fill/w_640,h_359,al_c,q_85,enc_auto/bd17b4_223aae21a923416abfc2202d1eae3a7e~mv2.png",
+    githubLink: "https://github.com/baoandng/ecommerce-platform",
+    technologies: "TypeScript, React, Node.js, Express, MongoDB",
+    liveDemoLink: "https://baoandng.github.io/ecommerce-platform",
   },
 ];
 

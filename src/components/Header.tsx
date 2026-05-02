@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-type HeaderProps = {
-  currentPath: string;
-};
-
-export default function Header({ currentPath }: HeaderProps) {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -37,13 +33,6 @@ export default function Header({ currentPath }: HeaderProps) {
     { label: "Writing", id: "techwriting" },
   ];
 
-  const isActive = (href: string) => {
-    if (href === "/") {
-      return currentPath === "/";
-    }
-    return currentPath.startsWith(href);
-  };
-
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -60,7 +49,7 @@ export default function Header({ currentPath }: HeaderProps) {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="font-heading text-2xl font-bold text-foreground hover:text-accent-teal transition-colors"
+            className="font-heading text-2xl font-bold text-foreground hover:text-accent-teal transition-colors cursor-pointer"
           >
             <span className="text-accent-teal">{"<"}</span>
             BAN
@@ -73,11 +62,7 @@ export default function Header({ currentPath }: HeaderProps) {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`text-foreground hover:text-accent-teal transition-colors font-medium text-sm ${
-                  isActive(link.id)
-                    ? "text-primary font-semibold"
-                    : "text-dark-navy hover:text-primary"
-                }`}
+                className={`text-foreground hover:text-accent-teal transition-colors font-medium text-sm cursor-pointer`}
               >
                 {link.label}
               </button>
