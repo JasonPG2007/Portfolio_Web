@@ -313,8 +313,7 @@ export default function HomePage() {
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-2 px-6 py-3 bg-accent-teal/10 text-accent-teal border border-accent-teal/30 hover:bg-accent-teal hover:text-foreground transition-all font-paragraph text-sm uppercase tracking-wider"
                             >
-                              <ExternalLink className="w-4 h-4" /> Live
-                              Deployment
+                              <ExternalLink className="w-4 h-4" /> Live Site
                             </a>
                           )}
                         </div>
