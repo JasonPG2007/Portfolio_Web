@@ -1,0 +1,24 @@
+@import "./fonts.css";
+@import "tailwindcss";
+
+/* Custom Theme Variables */
+@theme {
+  /* Bảng màu tối và màu nhấn xanh thương hiệu */
+  --color-primary: #20ab47; /* Màu xanh lá chuyên nghiệp bạn đã chọn */
+  --color-dark-navy: #0a0a0a; /* Nền đen sâu gần như tuyệt đối */
+  --color-background: #0d0d0d; /* Màu nền phụ cho các card/section */
+  --color-light-gray: #a0a0a0; /* Màu chữ mô tả (description) */
+  --color-accent-teal: #e2a329; /* Màu nhấn cyan cho các icon/chi tiết nhỏ */
+  --color-accent-rock-blue: #1b5e20; /* Màu nhấn cyan cho các icon/chi tiết nhỏ */
+  --color-secondary: #1a1a1a;
+  --color-foreground: #e0e0e0; /* Màu chữ chính sáng trên nền tối */
+  --color-card-background: #141414; /* Màu nền cho các card */
+  --color-muted-text: #475569;
+
+  /* Cấu hình Spacing cho khoảng cách rộng rãi như hình */
+  --spacing-section: 6rem;
+
+  /* Font chữ công nghệ (Space Grotesk cho tiêu đề, Inter cho nội dung) */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-paragraph: "Inter", sans-serif;
+}
