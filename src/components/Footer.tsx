@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com/baoandng"
+              href="https://github.com/JasonPG2007"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-text hover:text-accent-teal transition-colors"
@@ -30,7 +30,7 @@ export default function Footer() {
               <FaGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/baoandng"
+              href="https://www.linkedin.com/in/quoc-bao-an-nguyen/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-text hover:text-accent-teal transition-colors"

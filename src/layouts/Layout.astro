@@ -18,14 +18,20 @@ const currentPath = Astro.url.pathname;
     <meta name="description" content="Portfolio of Quoc Bao An Nguyen - Software Engineer in Lawrenceville, GA. Specializing in .NET, SQL, React, and AI Integration." />
     <meta name="author" content="Quoc Bao An Nguyen" />
 
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/avatar_web_portfolio.png" />
+    <meta property="og:title" content="Quoc Bao An Nguyen | Software Engineer" />
+    <meta property="og:description" content="Portfolio of Quoc Bao An Nguyen - Software Engineer in Lawrenceville, GA. Specializing in .NET, SQL, React, and AI Integration." />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/jpeg" href="/images/avatar_CV_removebg.png" />
     
     <!-- Meta for Astro -->
     <meta name="generator" content={Astro.generator} />
 </head>
 	<body>
-	<Header client:load />
+	<Header client:idle />
     <slot />
     <Footer client:visible />
 	</body>

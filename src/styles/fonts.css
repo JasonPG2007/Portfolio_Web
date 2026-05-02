@@ -40,7 +40,7 @@ h3,
 .tech-title {
   font-family: var(--font-heading);
   text-transform: uppercase;
-  letter-spacing: -0.02em; /* Để giống hình QUOC BAO AN NGUYEN */
+  letter-spacing: 0.1em;
   font-weight: 700;
 }
 

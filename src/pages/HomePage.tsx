@@ -1,23 +1,13 @@
-// HPI 1.7-G
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 import {
-  motion,
-  useScroll,
-  useTransform,
-  AnimatePresence,
-} from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import {
-  Mail,
-  MapPin,
   ExternalLink,
-  ChevronDown,
   ArrowUpRight,
   Terminal,
   Database,
   Code2,
   Cpu,
-  Globe,
   Layout,
   Server,
 } from "lucide-react";
@@ -35,6 +25,8 @@ import type { OpenSourceContributions } from "@/entities/opensource";
 import { openSourceContributionsData } from "@/entities";
 import type { TechWriting } from "@/entities/techwriting";
 import { techWritingData } from "@/entities";
+import HeroSection from "./HeroSection";
+import AboutSection from "./AboutSection";
 
 // --- Scoped Custom Styles ---
 const customStyles = `
@@ -72,8 +64,6 @@ export default function HomePage() {
 
   // --- Scroll Tracking for Parallax ---
   const { scrollY } = useScroll();
-  const heroY = useTransform(scrollY, [0, 1000], [0, 300]);
-  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
   const bgY = useTransform(scrollY, [0, 2000], [0, 500]);
 
   useEffect(() => {
@@ -86,13 +76,6 @@ export default function HomePage() {
     setTechWriting(techWritingData);
     setIsLoading(false);
   }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   const groupedSkills = skills.reduce(
     (acc, skill) => {
@@ -132,330 +115,10 @@ export default function HomePage() {
       </div>
 
       {/* --- HERO SECTION --- */}
-      <section
-        id="hero"
-        className="relative z-10 w-full min-h-screen flex items-center justify-center pt-20"
-      >
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 lg:px-24">
-          <motion.div
-            style={{ y: heroY, opacity: heroOpacity }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center"
-          >
-            {/* Right Column: Profile Info Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="lg:col-span-4 relative h-auto flex items-center justify-center order-first lg:order-last"
-            >
-              <div className="relative w-full flex items-center justify-center">
-                {/* Profile Info Container */}
-                <div className="relative w-full p-8 border-2 border-accent-teal/30 clip-diagonal bg-card-background/20 backdrop-blur-md overflow-hidden group">
-                  <div className="space-y-6">
-                    {/* Status */}
-                    <div className="flex justify-between items-center gap-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        className="lucide lucide-terminal w-8 h-8 text-accent-teal opacity-50"
-                      >
-                        <polyline points="4 17 10 11 4 5"></polyline>
-                        <line x1="12" x2="20" y1="19" y2="19"></line>
-                      </svg>
-                      <div className="text-xs text-accent-teal/50 font-paragraph">
-                        STATUS: ONLINE
-                      </div>
-                    </div>
-
-                    {/* Core Focus */}
-                    <div>
-                      <p className="text-xs text-muted-text uppercase tracking-widest font-paragraph mb-2">
-                        Core Focus
-                      </p>
-                      <p className="text-base font-paragraph text-foreground">
-                        Backend & AI
-                      </p>
-                    </div>
-
-                    <div className="h-px bg-gradient-to-r from-accent-teal/30 to-transparent" />
-
-                    {/* Primary Stack */}
-                    <div>
-                      <p className="text-xs text-muted-text uppercase tracking-widest font-paragraph mb-2">
-                        Primary Stack
-                      </p>
-                      <p className="text-base font-paragraph text-foreground">
-                        .NET Core / C#
-                      </p>
-                    </div>
-
-                    <div className="h-px bg-gradient-to-r from-accent-rock-blue/60 to-transparent" />
-
-                    {/* Experience */}
-                    <div>
-                      <p className="text-xs text-muted-text uppercase tracking-widest font-paragraph mb-2">
-                        Experience
-                      </p>
-                      <p className="text-base font-paragraph text-foreground">
-                        2+ Years
-                      </p>
-                    </div>
-
-                    {/* Internship Badge */}
-                    <div className="pt-2">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded">
-                        <div className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                        <span className="text-xs text-accent-teal font-paragraph uppercase tracking-widest font-semibold">
-                          Available for Internship
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-accent-teal/30" />
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-accent-rock-blue/30" />
-              </div>
-            </motion.div>
-
-            {/* Left Column: Typography & CTA */}
-            <div className="lg:col-span-8 flex flex-col justify-center order-last lg:order-first">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="flex items-center gap-4 mb-8"
-              >
-                <div className="h-px w-12 bg-accent-teal" />
-                <span className="text-accent-teal font-paragraph text-sm tracking-widest uppercase">
-                  System Architect
-                </span>
-                <div className="flex items-center gap-2 text-muted-text text-sm ml-4">
-                  <MapPin className="w-4 h-4" />
-                  Lawrenceville, GA
-                </div>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-                className="font-heading text-6xl md:text-8xl lg:text-[9rem] font-black leading-[0.9] tracking-tighter mb-6"
-              >
-                QUOC BAO
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-text">
-                  AN NGUYEN
-                </span>
-              </motion.h1>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="font-paragraph text-xl md:text-2xl text-accent-teal mb-8 max-w-2xl"
-              >
-                Software Engineer | Backend Developer
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-lg md:text-xl text-muted-text mb-8 max-w-3xl leading-relaxed border-l-2 border-accent-rock-blue/30 pl-6"
-              >
-                Building scalable backend systems and AI-powered applications
-                with real-world impact. Precision engineering meets intelligent
-                architecture.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
-                className="mb-12 inline-flex items-center gap-3 px-6 py-3 border border-accent-teal/40 bg-accent-teal/5 backdrop-blur-sm"
-              >
-                <div className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                <span className="text-accent-teal font-paragraph text-sm uppercase tracking-widest font-semibold">
-                  Available for Internship
-                </span>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="flex flex-wrap items-center gap-6"
-              >
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="group relative px-8 py-4 bg-accent-teal text-primary-foreground font-heading font-bold uppercase tracking-wider overflow-hidden clip-diagonal transition-transform hover:scale-105 cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
-                  <span className="relative z-10 flex items-center gap-2">
-                    Explore Now <ArrowUpRight className="w-5 h-5" />
-                  </span>
-                </button>
-
-                <div className="flex gap-4">
-                  <a
-                    href="https://github.com/JasonPG2007"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-4 border border-accent-teal/20 text-foreground hover:text-accent-teal hover:border-accent-teal/50 transition-colors clip-diagonal-reverse bg-card-background/30 backdrop-blur-sm"
-                    aria-label="GitHub"
-                  >
-                    <FaGithub className="w-6 h-6" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/quoc-bao-an-nguyen/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-4 border border-accent-teal/20 text-foreground hover:text-accent-teal hover:border-accent-teal/50 transition-colors clip-diagonal-reverse bg-card-background/30 backdrop-blur-sm"
-                    aria-label="LinkedIn"
-                  >
-                    <FaLinkedin className="w-6 h-6" />
-                  </a>
-                  <a
-                    href="mailto:baoandng07@gmail.com"
-                    className="p-4 border border-accent-teal/20 text-foreground hover:text-accent-teal hover:border-accent-teal/50 transition-colors clip-diagonal-reverse bg-card-background/30 backdrop-blur-sm"
-                    aria-label="Email"
-                  >
-                    <Mail className="w-6 h-6" />
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-xs text-muted-text tracking-widest uppercase">
-            Scroll to explore
-          </span>
-          <button
-            onClick={() => scrollToSection("about")}
-            className="text-accent-teal hover:text-white transition-colors"
-          >
-            <ChevronDown className="w-6 h-6 animate-bounce" />
-          </button>
-        </motion.div>
-      </section>
+      <HeroSection></HeroSection>
 
       {/* --- ABOUT SECTION (Sticky Side Layout) --- */}
-      <section
-        id="about"
-        className="relative z-10 w-full py-32 border-t border-white/5"
-      >
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 lg:px-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            {/* Sticky Header */}
-            <div className="lg:col-span-4">
-              <div className="sticky top-32">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className="flex items-center gap-4 mb-6"
-                >
-                  <span className="text-accent-teal font-paragraph text-sm">
-                    01.
-                  </span>
-                  <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-wider">
-                    System <br />
-                    <span className="text-muted-text">Overview</span>
-                  </h2>
-                </motion.div>
-                <div className="hidden lg:block w-full h-px bg-gradient-to-r from-accent-teal/30 to-transparent mt-8" />
-              </div>
-            </div>
-
-            {/* Scrolling Content */}
-            <div className="lg:col-span-8 space-y-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="prose prose-invert max-w-none"
-              >
-                <p className="text-2xl md:text-3xl font-heading leading-tight text-foreground mb-8">
-                  Backend-focused Software Developer experienced in{" "}
-                  <span className="text-accent-teal">
-                    ASP.NET Core (.NET 8)
-                  </span>
-                  , <span className="text-accent-teal">SQL Server</span>, and
-                  building scalable APIs.
-                </p>
-                <p className="text-lg text-muted-text leading-relaxed font-paragraph">
-                  I specialize in architecting robust, production-ready systems
-                  that solve complex real-world problems. My engineering
-                  philosophy centers on performance, scalability, and creating
-                  seamless integrations between advanced AI models and
-                  traditional backend infrastructure.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              >
-                {[
-                  {
-                    title: "AI-Powered Systems",
-                    desc: "LLM agents, function calling, image search with CLIP embeddings.",
-                    icon: <Cpu className="w-6 h-6 text-accent-rock-blue" />,
-                  },
-                  {
-                    title: "Real-Time Architecture",
-                    desc: "Low-latency coordination and synchronization using SignalR.",
-                    icon: <Globe className="w-6 h-6 text-accent-teal" />,
-                  },
-                  {
-                    title: "Accessible Development",
-                    desc: "Strict adherence to WCAG compliance and inclusive design.",
-                    icon: <Layout className="w-6 h-6 text-accent-rock-blue" />,
-                  },
-                  {
-                    title: "Open Source",
-                    desc: "Active contributor to ABP Framework (14k+ stars).",
-                    icon: <FaGithub className="w-6 h-6 text-accent-teal" />,
-                  },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="p-6 border border-white/10 bg-card-background/20 backdrop-blur-sm hover:border-accent-teal/30 transition-colors group"
-                  >
-                    <div className="mb-4 p-3 bg-white/5 inline-block rounded-lg group-hover:bg-accent-teal/10 transition-colors">
-                      {item.icon}
-                    </div>
-                    <h3 className="font-heading text-xl font-bold text-foreground mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-text font-paragraph">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutSection></AboutSection>
 
       {/* --- SKILLS SECTION (Data-Driven Grid) --- */}
       <section
@@ -474,7 +137,7 @@ export default function HomePage() {
                 02.
               </span>
               <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-wider">
-                Technical <span className="text-muted-text">Arsenal</span>
+                Technical <span className="text-muted-text">Skills</span>
               </h2>
             </div>
             <div className="text-muted-text font-paragraph text-sm max-w-md">
@@ -515,7 +178,7 @@ export default function HomePage() {
                           {categorySkills.map((skill) => (
                             <span
                               key={skill._id}
-                              className="px-3 py-1.5 bg-white/5 border border-white/10 text-sm text-muted-text font-paragraph hover:text-accent-teal hover:border-accent-teal/30 transition-colors cursor-default"
+                              className="px-3 py-1.5 bg-white/5 border border-white/10 text-sm text-[#a0a0a0] font-paragraph hover:text-accent-teal hover:border-accent-teal/30 transition-colors cursor-default"
                             >
                               {skill.skillName}
                             </span>
@@ -648,7 +311,7 @@ export default function HomePage() {
                               href={project.liveDemoLink}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-6 py-3 bg-accent-teal/10 text-accent-teal border border-accent-teal/30 hover:bg-accent-teal hover:text-primary-foreground transition-all font-paragraph text-sm uppercase tracking-wider"
+                              className="inline-flex items-center gap-2 px-6 py-3 bg-accent-teal/10 text-accent-teal border border-accent-teal/30 hover:bg-accent-teal hover:text-foreground transition-all font-paragraph text-sm uppercase tracking-wider"
                             >
                               <ExternalLink className="w-4 h-4" /> Live
                               Deployment
@@ -665,6 +328,7 @@ export default function HomePage() {
                               src={project.image}
                               alt={project.title || "Project Visual"}
                               width={1200}
+                              loading="lazy"
                               className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                             />
                           ) : (
@@ -673,6 +337,7 @@ export default function HomePage() {
                               src="https://static.wixstatic.com/media/bd17b4_ef8b1b091aa04f72abd3a1666a7369a1~mv2.png?originWidth=1152&originHeight=640"
                               alt="Project Placeholder"
                               width={1200}
+                              loading="lazy"
                               className="w-full h-full object-cover opacity-30 grayscale mix-blend-overlay"
                             />
                           )}
@@ -924,6 +589,7 @@ export default function HomePage() {
                             src={cert.image}
                             alt={cert.certificationName || "Cert"}
                             width={200}
+                            loading="lazy"
                             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
                           />
                         </div>

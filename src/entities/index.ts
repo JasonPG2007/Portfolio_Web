@@ -79,11 +79,22 @@ export const educationData: Education[] = [
     _id: "1",
     institutionName: "Discovery High School",
     degreeProgram: "High School Diploma",
-    graduationDate: "2024-05-15",
-    honorsGPA: "GPA: 3.8/4.0, National Honor Society",
-    location: "Example City, Country",
+    graduationDate: "May 2026",
+    honorsGPA:
+      "Founding Charter Member of the Computer Science Honor Society (CSHS)",
+    location: "Lawrenceville, Georgia, USA",
     additionalDetails:
-      "Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering. Dean's List for 6 semesters.",
+      "Relevant coursework: AP Computer Science A, AP Computer Science Principles.",
+  },
+  {
+    _id: "2",
+    institutionName: "Aptech Computer Education (Global IT Training)",
+    degreeProgram: "Advanced Diploma in Software Engineering (ADSE)",
+    graduationDate: "Nov 2024",
+    honorsGPA: "3.83/4.00, Dean's List",
+    location: "Da Nang, Vietnam",
+    additionalDetails:
+      "Credential issued by Aptech India, rigorous 2-year enterprise-level software engineering program focused on full-stack development (Java EE, .NET Core, SQL Server).",
   },
 ];
 
@@ -110,21 +121,21 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     _id: "1",
-    jobTitle: "Nail Technician",
+    jobTitle: "Freelance Web Developer",
     companyName: "Nail Salon Parisian",
-    startDate: "2020-02-03",
-    endDate: "2022-08-12",
+    startDate: "2025-06-03",
+    endDate: "2025-12-12",
     achievements:
-      "Provided high-quality manicures and pedicures, contributing to a 15% increase in repeat customer bookings. Maintained a 5-star customer satisfaction rating through meticulous service and personalized care.",
+      "Re-engineered a legacy web app, improving performance and request handling, increasing user retention by 20%. Integrated Google Maps API and optimized booking validation, boosting monthly appointment requests by 15%.",
   },
   {
     _id: "2",
-    jobTitle: "Full Stack Developer",
-    companyName: "Web Innovations Co.",
-    startDate: "20217-05-03",
-    endDate: "2020-02-12",
+    jobTitle: "Freelance Web Developer",
+    companyName: "Amazing Education",
+    startDate: "2024-06-03",
+    endDate: "2026-02-12",
     achievements:
-      "Developed and maintained responsive web applications using React and Node.js, contributing to a 20% increase in user engagement. Collaborated with UX/UI designers to translate wireframes into functional features.",
+      "Engineered a course management platform with streamlined enrollment workflows, improving student onboarding efficiency. Optimized performance and responsive architecture, increasing organic mobile traffic by 25%. Built backend services and API integrations for a client-facing app, improving data flow and boosting student inquiries by 30%.",
   },
 ];
 
@@ -153,13 +164,13 @@ export interface OpenSourceContributions {
 export const openSourceContributionsData: OpenSourceContributions[] = [
   {
     _id: "1",
-    projectName: "React",
+    projectName: "ABP Framework",
     contributionDescription:
-      "Contributed to React's documentation by improving examples and fixing typos.",
+      "Fixing a culture-specific bug in string casing that affected Angular route generation, replaced ToUpper() with ToUpperInvariant() to ensure consistent behavior across environments.",
     outcome:
       "Merged pull request and received positive feedback from maintainers.",
-    projectUrl: "https://github.com/facebook/react",
-    pullRequestUrl: "https://github.com/facebook/react/pull/12345",
+    projectUrl: "https://github.com/abpframework/abp",
+    pullRequestUrl: "https://github.com/abpframework/abp/pull/25128",
     contributionDate: "2023-06-01",
   },
 ];
@@ -191,29 +202,74 @@ export interface Projects {
 export const projectsData: Projects[] = [
   {
     _id: "1",
-    title: "AI-Powered Course Recommendation Agent",
+    title: "AI-Powered Course Recommendation & Enrollment Agent",
     description:
-      "Developed an intelligent system that recommends personalized courses to students based on their academic history, interests, and career goals, utilizing machine learning algorithms.",
+      "Built an AI-powered course recommendation and enrollment system using LLM with function calling, enabling personalized suggestions and seamless enrollment through conversational workflows.",
     achievements:
-      "Designed and developed a modern portfolio site with smooth animations and responsive design.",
-    image:
-      "https://static.wixstatic.com/media/bd17b4_7744b4fa9a6648a682892c25fb45b5be~mv2.png/v1/fill/w_640,h_359,al_c,q_85,enc_auto/bd17b4_7744b4fa9a6648a682892c25fb45b5be~mv2.png",
-    githubLink: "https://github.com/baoandng/portfolio",
-    technologies: "TypeScript, React, Node.js, Express, MongoDB",
-    liveDemoLink: "https://baoandng.github.io/portfolio",
+      "Built an LLM-powered agent with function calling to deliver personalized course recommendations and automate enrollment through multi-turn conversational workflows integrated with backend APIs.",
+    image: "/images/AI_Powered_Web.png",
+    technologies:
+      "ASP.NET Core (.NET 8), GPT-4o-mini, TypeScript, React, Astro, Tailwind CSS",
+    liveDemoLink: "https://nextstepusa.vercel.app/",
   },
   {
     _id: "2",
-    title: "E-Commerce Platform",
+    title: 'FBLA "Lost and Found" Platform',
     description:
-      "Built a full-stack e-commerce solution with a focus on user experience and performance.",
+      "Engineered a scalable full-stack platform for managing lost and found items with AI-powered image matching and real-time user coordination.",
     achievements:
-      "Implemented a robust payment processing system and integrated with multiple payment gateways.",
-    image:
-      "https://static.wixstatic.com/media/bd17b4_223aae21a923416abfc2202d1eae3a7e~mv2.png/v1/fill/w_640,h_359,al_c,q_85,enc_auto/bd17b4_223aae21a923416abfc2202d1eae3a7e~mv2.png",
-    githubLink: "https://github.com/baoandng/ecommerce-platform",
-    technologies: "TypeScript, React, Node.js, Express, MongoDB",
-    liveDemoLink: "https://baoandng.github.io/ecommerce-platform",
+      "Engineered a scalable full-stack platform with AI image matching, real-time workflows, secure authentication, analytics dashboard, and accessibility features, improving item retrieval accuracy and system usability.",
+    image: "/images/fbla.png",
+    githubLink: "https://github.com/JasonPG2007/FBLA-Web",
+    technologies:
+      "ASP.NET Core (.NET 8), React, Vite, CSS, SQL Server, OpenAI CLIP, Azure",
+    liveDemoLink: "https://back2me.vercel.app/",
+  },
+  {
+    _id: "3",
+    title: "Nail Salon Parisian",
+    description:
+      "Client-facing booking platform for a nail salon, focused on improving scheduling efficiency and user experience.",
+    achievements:
+      "Re-engineered a legacy booking system to improve performance and user retention, while integrating Google Maps and validation logic to streamline appointment workflows.",
+    image: "/images/nailsalon.png",
+    technologies: "React, Vite, Google Maps Integration, CSS",
+    liveDemoLink: "https://nailsalonparisian.com/",
+  },
+  {
+    _id: "2",
+    title: "Amazing Education",
+    description:
+      "Course management platform designed to support student enrollment, course discovery, and administrative workflows.",
+    achievements:
+      "Built a course management system with enrollment workflows, optimized system performance and responsive architecture, increasing student engagement and improving data flow.",
+    image: "/images/amazingeducation.png",
+    technologies: "React, Vite, CSS",
+    liveDemoLink: "https://amazingeducation.onrender.com/",
+  },
+  {
+    _id: "4",
+    title: "Science Fair & IT Contest Project",
+    description:
+      "Developed a learning management system with optimized resource-flow simulation to enhance educational accessibility.",
+    achievements:
+      "Built a learning management system with optimized resource-flow simulation and interactive UI, earning 4th Prize for technical innovation and improved educational accessibility.",
+    image: "/images/NVT_Web.png",
+    // githubLink: "https://github.com/JasonPG2007/TechWizWordReal",
+    technologies: "ASP.NET Core (.NET 7), SQL Server, CSS",
+    // liveDemoLink: "https://back2me.vercel.app/",
+  },
+  {
+    _id: "5",
+    title: "TechWiz 4 - Product Showcase Website",
+    description:
+      "Developed a responsive product showcase website under a 72-hour competition deadline.",
+    achievements:
+      "Developed a responsive product showcase website within a 72-hour deadline, delivering a complete and user-friendly UI/UX solution under high-pressure conditions.",
+    image: "/images/techwiz4.png",
+    githubLink: "https://github.com/JasonPG2007/TechWizWordReal",
+    technologies: "HTML, CSS, JavaScript, Bootstrap",
+    liveDemoLink: "https://jasonpg2007.github.io/TechWizWordReal/index.html",
   },
 ];
 
@@ -240,24 +296,169 @@ export interface Skills {
 export const skillsData: Skills[] = [
   {
     _id: "1",
-    skillName: "TypeScript",
-    category: "Programming Language",
+    skillName: "C#",
+    category: "Languages",
     proficiencyLevel: "Advanced",
-    skillIcon: "https://example.com/typescript-icon.png",
-    description: "Proficient in TypeScript for scalable web development.",
+    description: "Proficient in C# for scalable web development.",
   },
   {
     _id: "2",
-    skillName: "React",
-    category: "Frontend Framework",
+    skillName: "Java",
+    category: "Languages",
+    proficiencyLevel: "Advanced",
+    description: "Proficient in Java for scalable web development.",
+  },
+  {
+    _id: "3",
+    skillName: "SQL",
+    category: "Languages",
+    proficiencyLevel: "Advanced",
+    description: "Proficient in SQL for database development.",
+  },
+  {
+    _id: "4",
+    skillName: "JavaScript",
+    category: "Languages",
+    proficiencyLevel: "Advanced",
+    description: "Proficient in JavaScript for scalable web development.",
+  },
+  {
+    _id: "5",
+    skillName: "PHP",
+    category: "Languages",
+    proficiencyLevel: "Advanced",
+    description: "Proficient in PHP for scalable web development.",
+  },
+  {
+    _id: "6",
+    skillName: "Dart",
+    category: "Languages",
+    proficiencyLevel: "Advanced",
+    description: "Proficient in Dart for scalable web development.",
+  },
+  {
+    _id: "7",
+    skillName: "Python",
+    category: "Languages",
+    proficiencyLevel: "Advanced",
+    description: "Proficient in Python for scalable web development.",
+  },
+  {
+    _id: "8",
+    skillName: "ASP.NET Core",
+    category: "Frameworks/Libraries",
     proficiencyLevel: "Advanced",
     skillIcon: "https://example.com/react-icon.png",
     description: "Experienced in building dynamic user interfaces with React.",
   },
   {
-    _id: "3",
+    _id: "9",
+    skillName: "Spring Boot",
+    category: "Frameworks/Libraries",
+    proficiencyLevel: "Advanced",
+    skillIcon: "https://example.com/react-icon.png",
+    description: "Experienced in building dynamic user interfaces with React.",
+  },
+  {
+    _id: "10",
     skillName: "Node.js",
-    category: "Backend Framework",
+    category: "Frameworks/Libraries",
+    proficiencyLevel: "Advanced",
+    skillIcon: "https://example.com/react-icon.png",
+    description: "Experienced in building dynamic user interfaces with React.",
+  },
+  {
+    _id: "11",
+    skillName: "React.js",
+    category: "Frameworks/Libraries",
+    proficiencyLevel: "Advanced",
+    skillIcon: "https://example.com/react-icon.png",
+    description: "Experienced in building dynamic user interfaces with React.",
+  },
+  {
+    _id: "12",
+    skillName: "SQL Server",
+    category: "Databases",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "13",
+    skillName: "MongoDB",
+    category: "Databases",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "14",
+    skillName: "Git",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "15",
+    skillName: "GitHub",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "16",
+    skillName: "AWS",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "17",
+    skillName: "Azure",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "18",
+    skillName: "RESTful APIs",
+    category: "Concepts",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "19",
+    skillName: "JWT",
+    category: "Concepts",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "20",
+    skillName: "OOP",
+    category: "Concepts",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "21",
+    skillName: "Data Structures & Algorithms",
+    category: "Concepts",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "22",
+    skillName: "Accessibility (WCAG)",
+    category: "Concepts",
     proficiencyLevel: "Intermediate",
     skillIcon: "https://example.com/nodejs-icon.png",
     description: "Capable of developing robust backend services with Node.js.",
@@ -287,22 +488,13 @@ export interface TechWriting {
 export const techWritingData: TechWriting[] = [
   {
     _id: "1",
-    title: "Building Scalable Backend Systems with Node.js",
+    title:
+      "How I Built an AI Agent with LLM Function Calling (and Avoided Unnecessary Tool Calls)",
     articleUrl:
-      "https://medium.com/@baoandng/building-scalable-backend-systems-with-node-js-123456789",
-    publicationDate: "2023-05-15",
-    platform: "Medium",
-    shortDescription:
-      "An in-depth guide on designing scalable backend architectures using Node.js.",
-  },
-  {
-    _id: "2",
-    title: "Getting Started with React for Beginners",
-    articleUrl:
-      "https://dev.to/baoandng/getting-started-with-react-for-beginners-987654321",
-    publicationDate: "2023-08-10",
+      "https://dev.to/jasonpg/i-built-an-ai-agent-that-learned-when-not-to-call-apis-llm-function-calling-system-design-26ea-temp-slug-8339080?preview=3ac23327fb88b2ab31b4c41dd887852c8bfeaf40a216298fcbe52d5feebf6c4ed5935fb1f79ed85e0b2cf2e3c15a1afad28a223a34527d3f1b550459",
+    publicationDate: "2026 May",
     platform: "Dev.to",
     shortDescription:
-      "A comprehensive introduction to React for developers new to frontend development.",
+      "Explained the design of a tool-augmented AI Agent system with decision-based orchestration, focusing on reducing redundant API calls and improving system efficiency.",
   },
 ];
