@@ -134,7 +134,7 @@ export const experienceData: Experience[] = [
     startDate: "2025-06-03",
     endDate: "2025-12-12",
     achievements:
-      "Re-engineered a legacy booking system to improve performance and boost monthly appointment requests by 15%, while integrating Google Maps API, validation workflows, and an AI-powered chatbot (Tawk.to) to streamline appointment scheduling.",
+      "Re-engineered a legacy booking system to improve performance and user retention, while integrating Google Maps API, validation workflows, and an AI-powered chatbot (Tawk.to) to streamline appointment scheduling and increase booking conversions.",
   },
   {
     _id: "2",
@@ -143,7 +143,7 @@ export const experienceData: Experience[] = [
     startDate: "2024-06-03",
     endDate: "2026-02-12",
     achievements:
-      "Built a course management platform with enrollment workflows, integrating an AI-powered chatbot (Tawk.to), optimizing performance and responsive architecture, and enhancing backend data flow to improve user engagement, system efficiency and boosting student inquiries by 30%.",
+      "Built a course management platform with enrollment workflows, integrating an AI-powered chatbot (Tawk.to), optimizing performance and responsive architecture, and enhancing backend data flow to improve onboarding efficiency and drive user engagement.",
   },
 ];
 
@@ -239,7 +239,7 @@ export const projectsData: Projects[] = [
     description:
       "Client-facing booking platform for a nail salon, focused on improving scheduling efficiency and user experience.",
     achievements:
-      "Re-engineered a legacy booking system to improve performance and user retention, while integrating Google Maps and validation logic to streamline appointment workflows.",
+      "Re-engineered a legacy booking system to improve performance and user retention, while integrating Google Maps API, validation workflows, and an AI-powered chatbot (Tawk.to) to streamline appointment scheduling and increase booking conversions.",
     image: "/images/nailsalon.png",
     technologies: "React, Vite, Google Maps Integration, CSS",
     liveDemoLink: "https://nailsalonparisian.com/",
@@ -250,7 +250,7 @@ export const projectsData: Projects[] = [
     description:
       "Course management platform designed to support student enrollment, course discovery, and administrative workflows.",
     achievements:
-      "Built a course management system with enrollment workflows, optimized system performance and responsive architecture, increasing student engagement and improving data flow.",
+      "Built a course management platform with enrollment workflows, integrating an AI-powered chatbot (Tawk.to), optimizing performance and responsive architecture, and enhancing backend data flow to improve onboarding efficiency and drive user engagement.",
     image: "/images/amazingeducation.png",
     technologies: "React, Vite, CSS",
     liveDemoLink: "https://amazingeducation.onrender.com/",
