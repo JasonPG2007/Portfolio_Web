@@ -77,6 +77,14 @@ export interface Education {
 export const educationData: Education[] = [
   {
     _id: "1",
+    institutionName: "Computer Science Honor Society (CSHS)",
+    degreeProgram: "Discovery High School Charter Member (Founding Scholar)",
+    location: "Lawrenceville, Georgia, USA",
+    additionalDetails:
+      "Selected as a Founding Charter Member of the school's first Computer Science Honor Society (CSHS), recognized for academic excellence and leadership, and actively contributing to peer mentorship, community outreach, and establishment of the chapter's values and initiatives, including Honor Night recognition.",
+  },
+  {
+    _id: "2",
     institutionName: "Discovery High School",
     degreeProgram: "High School Diploma",
     graduationDate: "May 2026",
@@ -84,17 +92,17 @@ export const educationData: Education[] = [
       "Founding Charter Member of the Computer Science Honor Society (CSHS)",
     location: "Lawrenceville, Georgia, USA",
     additionalDetails:
-      "Relevant coursework: AP Computer Science A, AP Computer Science Principles.",
+      "Relevant coursework: AP Computer Science A, AP Computer Science Principles, AP Precalculus.",
   },
   {
-    _id: "2",
+    _id: "3",
     institutionName: "Aptech Computer Education (Global IT Training)",
     degreeProgram: "Advanced Diploma in Software Engineering (ADSE)",
     graduationDate: "Nov 2024",
     honorsGPA: "3.83/4.00, Dean's List",
     location: "Da Nang, Vietnam",
     additionalDetails:
-      "Credential issued by Aptech India, rigorous 2-year enterprise-level software engineering program focused on full-stack development (Java EE, .NET Core, SQL Server).",
+      "Completed a rigorous 2-year enterprise software engineering program (Aptech India) with a 3.83 GPA (Dean’s List), gaining strong full-stack expertise in Java EE, .NET Core, and SQL Server.",
   },
 ];
 
@@ -126,7 +134,7 @@ export const experienceData: Experience[] = [
     startDate: "2025-06-03",
     endDate: "2025-12-12",
     achievements:
-      "Re-engineered a legacy web app, improving performance and request handling, increasing user retention by 20%. Integrated Google Maps API and optimized booking validation, boosting monthly appointment requests by 15%.",
+      "Re-engineered a legacy booking system to improve performance and boost monthly appointment requests by 15%, while integrating Google Maps API, validation workflows, and an AI-powered chatbot (Tawk.to) to streamline appointment scheduling.",
   },
   {
     _id: "2",
@@ -135,7 +143,7 @@ export const experienceData: Experience[] = [
     startDate: "2024-06-03",
     endDate: "2026-02-12",
     achievements:
-      "Engineered a course management platform with streamlined enrollment workflows, improving student onboarding efficiency. Optimized performance and responsive architecture, increasing organic mobile traffic by 25%. Built backend services and API integrations for a client-facing app, improving data flow and boosting student inquiries by 30%.",
+      "Built a course management platform with enrollment workflows, integrating an AI-powered chatbot (Tawk.to), optimizing performance and responsive architecture, and enhancing backend data flow to improve user engagement, system efficiency and boosting student inquiries by 30%.",
   },
 ];
 

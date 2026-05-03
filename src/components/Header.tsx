@@ -29,7 +29,7 @@ export default function Header() {
     { label: "Projects", id: "projects" },
     { label: "Experience", id: "experience" },
     { label: "Education", id: "education" },
-    { label: "Open Source", id: "opensource" },
+    { label: "Open Source", id: "contributions" },
     { label: "Writing", id: "techwriting" },
   ];
 

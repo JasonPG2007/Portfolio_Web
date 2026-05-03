@@ -90,7 +90,7 @@ export default function HeroSection() {
                         Experience
                       </p>
                       <p className="text-base font-paragraph text-foreground">
-                        2+ Years
+                        Freelance & Open Source
                       </p>
                     </div>
 
