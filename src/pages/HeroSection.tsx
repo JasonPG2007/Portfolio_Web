@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, ChevronDown, Mail, MapPin } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiDevdotto } from "react-icons/si";
 
 export default function HeroSection() {
@@ -210,6 +210,15 @@ export default function HeroSection() {
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin className="w-6 h-6" />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@BaoAnToBigTech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 border border-accent-teal/20 text-foreground hover:text-accent-teal hover:border-accent-teal/50 transition-colors clip-diagonal-reverse bg-card-background/30 backdrop-blur-sm"
+                    aria-label="YouTube"
+                  >
+                    <FaYoutube className="w-6 h-6" />
                   </a>
                   <a
                     href="mailto:baoandng07@gmail.com"
