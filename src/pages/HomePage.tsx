@@ -212,7 +212,7 @@ export default function HomePage() {
               03.
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-wider">
-              Featured <span className="text-muted-text">Deployments</span>
+              Featured <span className="text-muted-text">Projects</span>
             </h2>
           </motion.div>
         </div>

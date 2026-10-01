@@ -181,6 +181,17 @@ export const openSourceContributionsData: OpenSourceContributions[] = [
     pullRequestUrl: "https://github.com/abpframework/abp/pull/25128",
     contributionDate: "2023-06-01",
   },
+  {
+    _id: "2",
+    projectName: "Orchard Core",
+    contributionDescription:
+      "Authored official Orchard Core Admin Theme documentation, merged as PR #19195, later featured in Orchard Core 3.0 community release coverage by Lombiq Technologies.",
+    outcome:
+      "Merged pull request and received positive feedback from maintainers.",
+    projectUrl: "https://github.com/OrchardCMS/OrchardCore",
+    pullRequestUrl: "https://github.com/OrchardCMS/OrchardCore/pull/19195",
+    contributionDate: "2023-06-01",
+  },
 ];
 
 /**
@@ -210,19 +221,20 @@ export interface Projects {
 export const projectsData: Projects[] = [
   {
     _id: "1",
-    title: "AI-Powered Course Recommendation & Enrollment Agent",
+    title: "Mendly",
     description:
-      "Built an AI-powered course recommendation and enrollment system using LLM with function calling, enabling personalized suggestions and seamless enrollment through conversational workflows.",
+      "AI-powered stroke rehabilitation platform that delivers personalized cognitive and motor exercises through computer vision and adaptive AI.",
     achievements:
-      "Built an LLM-powered agent with function calling to deliver personalized course recommendations and automate enrollment through multi-turn conversational workflows integrated with backend APIs.",
-    image: "/images/AI_Powered_Web.png",
+      "Built for HopHacks Fall 2026, where it was named a Top 11 Finalist and won Best Use of DigitalOcean. Developed a computer-vision pipeline using body landmarks, joint angles, range of motion, and repetition validation to generate structured performance metrics for adaptive exercise recommendations.",
+    image: "/images/mendly.png",
     technologies:
-      "ASP.NET Core (.NET 8), GPT-4o-mini, TypeScript, React, Astro, Tailwind CSS",
-    liveDemoLink: "https://nextstepusa.vercel.app/",
+      "Next.js, MediaPipe, Gemini, Backboard AI, TigerData, ElevenLabs",
+    githubLink: "https://github.com/galacticaledge/mendly",
+    liveDemoLink: "https://withmendly.health/",
   },
   {
     _id: "2",
-    title: 'FBLA "Lost and Found" Platform',
+    title: "Lost & Found Platform (AI-Powered Full-Stack System)",
     description:
       "Engineered a scalable full-stack platform for managing lost and found items with AI-powered image matching and real-time user coordination.",
     achievements:
@@ -235,49 +247,15 @@ export const projectsData: Projects[] = [
   },
   {
     _id: "3",
-    title: "Nail Salon Parisian",
+    title: "Nova",
     description:
-      "Client-facing booking platform for a nail salon, focused on improving scheduling efficiency and user experience.",
+      "AI-powered music discovery platform that connects people through the emotional meaning behind the songs they love, rather than simply comparing playlists.",
     achievements:
-      "Re-engineered a legacy booking system to improve performance and user retention, while integrating Google Maps API, validation workflows, and an AI-powered chatbot (Tawk.to) to streamline appointment scheduling and increase booking conversions.",
-    image: "/images/nailsalon.png",
-    technologies: "React, Vite, Google Maps Integration, CSS",
-    liveDemoLink: "https://nailsalonparisian.com/",
-  },
-  {
-    _id: "2",
-    title: "Amazing Education",
-    description:
-      "Course management platform designed to support student enrollment, course discovery, and administrative workflows.",
-    achievements:
-      "Built a course management platform with enrollment workflows, integrating an AI-powered chatbot (Tawk.to), optimizing performance and responsive architecture, and enhancing backend data flow to improve onboarding efficiency and drive user engagement.",
-    image: "/images/amazingeducation.png",
-    technologies: "React, Vite, CSS",
-    liveDemoLink: "https://amazingeducation.onrender.com/",
-  },
-  {
-    _id: "4",
-    title: "Science Fair & IT Contest Project",
-    description:
-      "Developed a learning management system with optimized resource-flow simulation to enhance educational accessibility.",
-    achievements:
-      "Built a learning management system with optimized resource-flow simulation and interactive UI, earning 4th Prize for technical innovation and improved educational accessibility.",
-    image: "/images/NVT_Web.png",
-    // githubLink: "https://github.com/JasonPG2007/TechWizWordReal",
-    technologies: "ASP.NET Core (.NET 7), SQL Server, CSS",
-    // liveDemoLink: "https://back2me.vercel.app/",
-  },
-  {
-    _id: "5",
-    title: "TechWiz 4 - Product Showcase Website",
-    description:
-      "Developed a responsive product showcase website under a 72-hour competition deadline.",
-    achievements:
-      "Developed a responsive product showcase website within a 72-hour deadline, delivering a complete and user-friendly UI/UX solution under high-pressure conditions.",
-    image: "/images/techwiz4.png",
-    githubLink: "https://github.com/JasonPG2007/TechWizWordReal",
-    technologies: "HTML, CSS, JavaScript, Bootstrap",
-    liveDemoLink: "https://jasonpg2007.github.io/TechWizWordReal/index.html",
+      "Built for HackGT 13, using Gemini and vector embeddings to analyze the personal motivations behind users' favorite songs and place them into an AI-generated social galaxy based on shared emotional connections. Features personalized Connection Cards and messaging to help users discover meaningful connections through music.",
+    image: "/images/nova.png",
+    technologies: "Next.js, Gemini, Supabase, PostgreSQL, pgvector, Embeddings",
+    githubLink: "https://github.com/anish-s7/song-galaxy",
+    liveDemoLink: "https://song-galaxy-nu.vercel.app/",
   },
 ];
 
@@ -385,6 +363,14 @@ export const skillsData: Skills[] = [
   },
   {
     _id: "12",
+    skillName: "Next.js",
+    category: "Frameworks/Libraries",
+    proficiencyLevel: "Advanced",
+    skillIcon: "https://example.com/react-icon.png",
+    description: "Experienced in building dynamic user interfaces with React.",
+  },
+  {
+    _id: "13",
     skillName: "SQL Server",
     category: "Databases",
     proficiencyLevel: "Intermediate",
@@ -392,7 +378,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "13",
+    _id: "14",
     skillName: "MongoDB",
     category: "Databases",
     proficiencyLevel: "Intermediate",
@@ -400,7 +386,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "14",
+    _id: "15",
     skillName: "Git",
     category: "Tools & Cloud",
     proficiencyLevel: "Intermediate",
@@ -408,7 +394,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "15",
+    _id: "16",
     skillName: "GitHub",
     category: "Tools & Cloud",
     proficiencyLevel: "Intermediate",
@@ -416,7 +402,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "16",
+    _id: "17",
     skillName: "AWS",
     category: "Tools & Cloud",
     proficiencyLevel: "Intermediate",
@@ -424,7 +410,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "17",
+    _id: "18",
     skillName: "Azure",
     category: "Tools & Cloud",
     proficiencyLevel: "Intermediate",
@@ -432,7 +418,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "18",
+    _id: "19",
     skillName: "RESTful APIs",
     category: "Concepts",
     proficiencyLevel: "Intermediate",
@@ -440,7 +426,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "19",
+    _id: "20",
     skillName: "JWT",
     category: "Concepts",
     proficiencyLevel: "Intermediate",
@@ -448,7 +434,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "20",
+    _id: "21",
     skillName: "OOP",
     category: "Concepts",
     proficiencyLevel: "Intermediate",
@@ -456,7 +442,7 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "21",
+    _id: "22",
     skillName: "Data Structures & Algorithms",
     category: "Concepts",
     proficiencyLevel: "Intermediate",
@@ -464,9 +450,73 @@ export const skillsData: Skills[] = [
     description: "Capable of developing robust backend services with Node.js.",
   },
   {
-    _id: "22",
+    _id: "23",
     skillName: "Accessibility (WCAG)",
     category: "Concepts",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "24",
+    skillName: "Supabase",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "25",
+    skillName: "OpenAI API",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "26",
+    skillName: "Gemini API",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "27",
+    skillName: "MediaPipe",
+    category: "Frameworks/Libraries",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "28",
+    skillName: "Backboard",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "29",
+    skillName: "ElevenLabs",
+    category: "Tools & Cloud",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "30",
+    skillName: "CI/CD",
+    category: "Concepts",
+    proficiencyLevel: "Intermediate",
+    skillIcon: "https://example.com/nodejs-icon.png",
+    description: "Capable of developing robust backend services with Node.js.",
+  },
+  {
+    _id: "30",
+    skillName: "GitHub Actions",
+    category: "Tools & Cloud",
     proficiencyLevel: "Intermediate",
     skillIcon: "https://example.com/nodejs-icon.png",
     description: "Capable of developing robust backend services with Node.js.",
@@ -500,9 +550,19 @@ export const techWritingData: TechWriting[] = [
       "How I Built an AI Agent with LLM Function Calling (and Avoided Unnecessary Tool Calls)",
     articleUrl:
       "https://dev.to/jasonpg/i-built-an-ai-agent-that-learned-when-not-to-call-apis-llm-function-calling-system-design-26ea-temp-slug-8339080?preview=3ac23327fb88b2ab31b4c41dd887852c8bfeaf40a216298fcbe52d5feebf6c4ed5935fb1f79ed85e0b2cf2e3c15a1afad28a223a34527d3f1b550459",
-    publicationDate: "2026 May",
+    publicationDate: "2026 Sep",
     platform: "Dev.to",
     shortDescription:
       "Explained the design of a tool-augmented AI Agent system with decision-based orchestration, focusing on reducing redundant API calls and improving system efficiency.",
+  },
+  {
+    _id: "2",
+    title: "From MediaPipe to Adaptive AI: Building Mendly's Rehab CV Pipeline",
+    articleUrl:
+      "https://dev.to/jasonpg/how-our-top-11-hophacks-project-turned-noisy-mediapipe-pose-data-into-reliable-rehabilitation-411d",
+    publicationDate: "2026 Sep",
+    platform: "Dev.to",
+    shortDescription:
+      "Explored how Mendly transforms noisy MediaPipe pose data into reliable rehab metrics for valid-repetition detection and adaptive AI planning.",
   },
 ];

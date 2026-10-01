@@ -24,7 +24,7 @@ export default function AboutSection() {
                     01.
                   </span>
                   <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-wider">
-                    System <br />
+                    Profile <br />
                     <span className="text-muted-text">Overview</span>
                   </h2>
                 </motion.div>
